@@ -1,0 +1,25 @@
+{{#each main}}
+<section class="main {{this.title}}" data-scroll="toggle(.visable, .hidden) offset(0, -350px) addHeight">
+	<div class="container">
+		<div class="txt">
+			<div class="logo">
+				<img src="images/{{this.img}}-logo.png" alt="">
+			</div>
+			<h2>
+				Build
+				something
+				{{this.title}}
+			</h2>
+			<p>
+				{{this.copy}}
+			</p>
+			<a class="cta case-study" href="#">
+				View Case Study
+			</a>
+		</div>
+		<div class="img">
+			<img src="images/{{this.img}}.png">
+		</div>
+	</div>
+</section>
+{{/each}}

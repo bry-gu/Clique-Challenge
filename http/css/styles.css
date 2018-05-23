@@ -1,0 +1,451 @@
+:root {
+  --orange: #f88601;
+}
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text");
+@font-face {
+  font-family: Brandon;
+  src: url("../fonts/Brandon_reg.otf");
+}
+@font-face {
+  font-family: Brandon Bold;
+  src: url("../fonts/Brandon_bld.otf");
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+.cta {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 1.25em 1.5em;
+  color: transparent;
+  font-family: "Brandon Bold", sans-serif;
+  font-size: 18px;
+  line-height: 1.2em;
+  letter-spacing: 0.15em;
+}
+.cta:before,
+.cta:after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  transition: transform 0.3s ease-in;
+  color: var(--orange);
+  background-color: #fff;
+  top: -100%;
+  z-index: 1;
+}
+.cta:after {
+  color: #fff;
+  background-color: transparent;
+  top: 0;
+}
+.cta:hover:before,
+.cta:hover:after {
+  transform: translateY(100%);
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+}
+.nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  width: 110px;
+  color: transparent;
+  background-color: var(--orange);
+  background-image: url("../images/clique.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 72px;
+  z-index: 1000;
+}
+.nav .menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  transition: transform 2s ease;
+}
+.nav .menu li {
+  list-style-type: none;
+  color: #fff;
+  font-family: "Brandon Bold", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(0,0,0,0.5);
+  border-bottom: 2px transparent solid;
+  margin-right: 5em;
+  padding: 1.5em 0;
+}
+.nav .menu li.selected {
+  border-bottom: 2px var(--orange) solid;
+}
+.nav .call {
+  background-color: rgba(255,255,255,0.15);
+  border-radius: 3px;
+  color: #fff;
+  letter-spacing: 0.05em;
+  padding: 1em;
+  margin: auto 3em;
+}
+nav.hidden .menu {
+  transform: translateX(-100%);
+}
+nav.hidden .nav:hover .menu {
+  transform: translateX(0%);
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 150px;
+  height: 100vh;
+  background-image: url("../images/Layer18.png");
+  background-color: #666;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+header h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 60px;
+  line-height: 1.5em;
+  font-weight: normal;
+  margin-bottom: 2em;
+}
+header h2 a {
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin: 0 0.25em;
+  font-family: "Brandon Bold", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+header p {
+  font-family: "Brandon Bold", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 2px #fff solid;
+  padding-bottom: 0.75em;
+  margin-bottom: 3em;
+}
+.work,
+.contact {
+  height: 400px;
+  padding-left: 150px;
+  display: flex;
+  align-items: center;
+  background-image: url("../images/Rectangle33.png");
+}
+.work .txt,
+.contact .txt {
+  border-left: 2px var(--orange) solid;
+  padding-left: 3em;
+}
+.work .txt h2,
+.contact .txt h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 48px;
+  font-weight: normal;
+  margin: 0;
+}
+.work .txt p,
+.contact .txt p {
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+  margin: 0;
+}
+.main {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.main .container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  clip: rect(0, auto, auto, 0);
+}
+.main .container .txt {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  left: 150px;
+  top: 200px;
+  right: calc(50% + 100px);
+  bottom: 110px;
+  color: #fff;
+}
+.main .container .txt .logo img {
+  position: absolute;
+  left: 20px;
+  max-width: 100%;
+}
+.main .container .txt h2 {
+  flex: 1;
+  font-family: "Brandon Bold", sans-serif;
+  font-size: 60px;
+  line-height: 1.2em;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  white-space: pre-line;
+  margin-top: 0;
+}
+.main .container .txt p {
+  flex: 1;
+  font-family: 'Crimson Text' serif;
+  font-size: 24px;
+  line-height: 1.3em;
+  letter-spacing: 0.075em;
+}
+.main .container .txt .cta {
+  flex: none;
+}
+.main .container .img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50vw;
+}
+.main .container .img img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  transition: 1s ease;
+}
+.main.hidden .img img {
+  opacity: 0;
+  transform: translateY(150px) translateX(50px);
+}
+.main.visable .img img {
+  opacity: 1;
+  transform: translateY(0px) translateX(0px);
+}
+.main.healthy .container {
+  background-image: url("../images/lol-bg.png");
+  background-color: #0d3479;
+}
+.main.educational .container {
+  background-image: url("../images/kc-bg.png");
+  background-color: #bf163f;
+}
+.main.financial .container {
+  background-image: url("../images/fib-bg.png");
+  background-color: #1297d0;
+}
+.main.environmental .container {
+  background-image: url("../images/cnec-bg.png");
+  background-color: #18b05b;
+}
+.main.delicious .container {
+  background-image: url("../images/mp-bg.png");
+  background-color: #1a1a1d;
+}
+.main.charitable .container {
+  background-image: url("../images/soc-bg.png");
+  background-color: #d63541;
+}
+.main.inventive .container {
+  background-image: url("../images/lg-bg.png");
+  background-color: #1d1d1d;
+}
+.main.holistic .container {
+  background-image: url("../images/rf-bg.png");
+  background-color: #1490bd;
+}
+.main.luxurious .container {
+  background-image: url("../images/denali-bg.png");
+  background-color: #1d4859;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1160px;
+  margin: 150px auto;
+}
+.gallery .square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 5px;
+  min-height: 280px;
+  min-width: 280px;
+  background-color: #cac;
+  transition: filter 1s ease;
+  filter: saturate(0) brightness(1.2);
+}
+.gallery .square:hover {
+  filter: saturate(1) brightness(1);
+}
+.gallery .square:hover .study,
+.gallery .square:hover .link {
+  opacity: 1;
+}
+.gallery .square .gallerybg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.gallery .square .logo {
+  z-index: 1;
+}
+.gallery .square .study,
+.gallery .square .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(0,0,0,0.25);
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.gallery .square .study {
+  right: 51px;
+}
+.gallery .square .link {
+  right: 0;
+}
+.contact {
+  flex-direction: column;
+  justify-content: center;
+}
+.contact h2 {
+  font-family: "Crimson Text";
+  font-size: 48px;
+  margin-bottom: 1m;
+}
+.contact .buttons .cta {
+  display: inline-block;
+  margin: 0 1em;
+  padding: 1.25em 2.5em;
+  border-color: var(--orange);
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.contact .buttons .cta:before,
+.contact .buttons .cta:after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  transition: transform 0.3s ease-in;
+  color: #fff;
+  background-color: var(--orange);
+  top: -100%;
+  z-index: 1;
+}
+.contact .buttons .cta:after {
+  color: var(--orange);
+  background-color: transparent;
+  top: 0;
+}
+.contact .buttons .cta:hover:before,
+.contact .buttons .cta:hover:after {
+  transform: translateY(100%);
+}
+.info {
+  display: flex;
+  align-items: center;
+  font-family: "Brandon";
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5em 150px;
+}
+.info .phone-number {
+  margin: auto 3em;
+}
+.info .phone-number:before {
+  content: url("../images/phoneicon.png");
+  margin-right: 0.5em;
+}
+.info .address:before {
+  content: url("../images/mapicon.png");
+  margin-right: 0.5em;
+}
+.info .social {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.info .social a {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  margin: 0.25em;
+  color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.info .social .facebook {
+  background-image: url("../images/facebook.png");
+}
+.info .social .youtube {
+  background-image: url("../images/youtube.png");
+}
+.info .social .flickr {
+  background-image: url("../images/flickr.png");
+}
+.info .social .twitter {
+  background-image: url("../images/twitter.png");
+}
+.info .social .linkedin {
+  background-image: url("../images/linkedin.png");
+}
+.arrow:after,
+.arrow:before {
+  content: "↓";
+}
+.case-study:after,
+.case-study:before {
+  content: "View Case Study";
+}
+#phone-number:after,
+#phone-number:before {
+  content: "312-379-9329";
+}
+#message-us:after,
+#message-us:before {
+  content: "Message Us";
+}

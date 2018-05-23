@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clique - Bry Gu Challenge</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script src="js/animations.js"></script>
+</head>
+<body>
+	<nav data-scroll="toggle(.visable, .hidden)">
+		<div class="nav container">
+			<a class="logo" href="#">Clique</a>
+			<ul class="menu">
+				<li class="selected">Work</li>
+				<li>About Us</li>
+				<li>Services</li>
+				<li>Clique University</li>
+				<li>Careers</li>
+				<li>Contact</li>
+			</ul>
+			<a class="call" href="#">312-379-9329</a>
+		</div>
+	</nav>
+	<header>
+		<h2>
+			&nbsp;An award-winning <a href="#">Digital Stragety</a>, <a href="#">Design</a>, <a href="#">Engineering</a> and <a href="#">Marketing</a> firm.
+		</h2>
+		<p>
+			Build Something
+		</p>
+		<a class="cta arrow" href="#">&darr;</a>
+	</header>
+	<section class="work">
+		<div class="txt">
+			<h2>
+				We believe the work is what matters.
+			</h2>
+			<p>
+				Here is some of ours.
+			</p>
+		</div>
+	</section>
+
+	{{> main}}
+
+	<section class="gallery">
+
+		{{> gallery}}
+
+	</section>
+	<footer>
+		<section class="contact">
+			<h2>Talk to a real person.</h2>
+			<div class="buttons">
+				<a id="phone-number" class="cta" href="#">312-379-9329</a>
+				<a id="message-us" class="cta" href="#">Message Us</a>
+			</div>
+		</section>
+		<section class="info">
+			<p>© 2015 Clique Studios, LLC.</p>
+			<p class="phone-number">312-379-9329</p>
+			<p class="address">410 s michigan ave, suite 908, chicago, il 60605</p>
+			<p class="social">
+				<a class="facebook" href="#">facebook</a>
+				<a class="youtube" href="#">youtube</a>
+				<a class="flickr" href="#">flickr</a>
+				<a class="twitter" href="#">twitter</a>
+				<a class="linkedin" href="#">linkedin</a>
+			</p>
+		</section>
+	</footer>
+</body>
+</html>
