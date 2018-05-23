@@ -17,13 +17,13 @@ gulp.task('html', function () {
 	var templateData = {
         main: [
         	{title:"healthy",img:"lol",copy:"Building the foundation for the new non-profit health provider to go from 0 members to 50,000."},
-        	{title:"educational",img:"kc",copy:"Making a Webby Honoree out of the midwest’s top culinary institute."},
+        	{title:"educational",img:"kc",copy:"Making a Webby Honoree out of the midwest's top culinary institute."},
         	{title:"financial",img:"fib",copy:"Transforming the interactive home of the first bank to open exclusively on the internet."},
-        	{title:"environmental",img:"cnec",copy:"Empowering Chicago’s low-income residents to reduce energy bills by 20%."},
-        	{title:"delicious",img:"mp",copy:"Reenergizing the leading fondue restaurant’s mobile strategy to reduce bounce rate by 79%."},
+        	{title:"environmental",img:"cnec",copy:"Empowering Chicago's low-income residents to reduce energy bills by 20%."},
+        	{title:"delicious",img:"mp",copy:"Reenergizing the leading fondue restaurant's mobile strategy to reduce bounce rate by 79%."},
         	{title:"charitable",img:"soc",copy:"Serving the 5,000 athletes in the Chicago-born Special Olympics."},
-        	{title:"inventive",img:"lg",copy:"Building web and and mobile applications for the inventor, entrepreneur, and “warm-blooded shark” on ABC’s Shark Tank."},
-        	{title:"holistic",img:"rf",copy:"Strategizing and designing the digital brand for Chicago’s hottest venture-backed weight loss startup."},
+        	{title:"inventive",img:"lg",copy:"Building web and and mobile applications for the inventor, entrepreneur, and \"warm-blooded shark\" on ABC's Shark Tank."},
+        	{title:"holistic",img:"rf",copy:"Strategizing and designing the digital brand for Chicago's hottest venture-backed weight loss startup."},
         	{title:"luxurious",img:"denali",copy:"Vivamus ac ultrices augue. Pellentesque convallis velit nulla, vitae efficitur massa."},
         ],
         gallery: [
